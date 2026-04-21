@@ -1,3 +1,22 @@
+@font-face {
+    font-family: 'Instrument Serif';
+    src: url('InstrumentSerif-Regular.woff2') format('woff2'),
+        url('InstrumentSerif-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Exo';
+    src: url('Exo-Regular.woff2') format('woff2'),
+        url('Exo-Regular.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 /* global, variables can be defined here */
 :root {
   --main-color: #A9A9A9;
@@ -17,6 +36,7 @@ p {
     padding: 2rem;
     margin: auto;
     text-align: left;
+    font-family: "Instrument Serif", sans-serif;
 }
 
 h1, h2, h3 {
@@ -24,6 +44,7 @@ h1, h2, h3 {
     margin: 10pt;
     width: 5cm;
     display: block;
+    font-family: "Exo", sans-serif;
 }
 
 h1 {
@@ -55,4 +76,44 @@ div {
 ul {
   padding: 10px 20px 10px 20px;
   display: inline;
+}
+
+button:hover {
+  color: color(srgb 0 0.4 0);
+  background-color: color-mix(in srgb, hotpink 70%, white 30%);
+}
+
+button:active {
+  transform: scale(0.95);
+  background-color: darkpink;
+}
+.Basics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.Accessories {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  justify-items: center;
+}
+
+/* a tablet orrr small laptop */
+@media (max-width: 900px) {
+  .Basics {
+    flex-direction: column;
+  }
+}
+/* phone */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  .Basics {
+    flex-direction: column;
+  }
 }
