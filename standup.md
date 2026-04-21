@@ -7,23 +7,23 @@
 
 | Participants | Last Week Progress|
 | :---                | :--- |
-| Ex: **Joe Bruin**    | Ex: **created UCLA website** |
-| Ex: **Ada Lovelace** | Ex: **Wrote first computer program** |
+| Ex: *Joe Bruin*    | Ex: *created UCLA website* |
+| Ex: *Ada Lovelace* | Ex: *Wrote first computer program* |
 
 | Participants | Current Week Progress|
 | :---                | :--- |
-| Ex: **Joe Bruin**    | Ex: **created UCLA website** |
-| Ex: **Ada Lovelace** | Ex: **Wrote first computer program** |
+| Ex: *Joe Bruin*    | Ex: *created UCLA website* |
+| Ex: *Ada Lovelace* | Ex: *Wrote first computer program* |
 
 | Participants | Next Week Goals|
 | :---                | :--- |
-| Ex: **Joe Bruin**    | Ex: **design a log in** |
-| Ex: **Ada Lovelace** | Ex: **design an education feature** |
+| Ex: *Joe Bruin*    | Ex: *design a log in* |
+| Ex: *Ada Lovelace* | Ex: *design an education feature* |
 
 | Participants | Hurdles|
 | :---                | :--- |
-| Ex: **Joe Bruin**    | Ex: **Background color won't show up** |
-| Ex: **Ada Lovelace** | Ex: **Github rejects my login** |
+| Ex: *Joe Bruin*    | Ex: *Background color won't show up* |
+| Ex: *Ada Lovelace* | Ex: *Github rejects my login* |
 
 ### Relevant Resources ###
 - (https://)
