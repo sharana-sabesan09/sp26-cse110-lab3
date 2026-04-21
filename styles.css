@@ -26,7 +26,7 @@ main {
 }
 
 .wide-gamut-example {
-  color: color(display-p3 0.2 0.6 0.2);
+  color: color(srgb 0.2 0.6 0.2);
 }
 
 .box-model-example {
@@ -130,7 +130,7 @@ div p {
   color: rgb(38, 92, 16);
   padding: 10px 10px 10px 10px;
   border-style: solid;
-  align-self: left;
+  align-self: flex-start;
   margin-left: 40pt;
 }
 
