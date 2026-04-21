@@ -7,45 +7,93 @@
     font-display: swap;
 }
 
-
-
 /* global, variables can be defined here */
 :root {
-  --main-color: #000000;
+  --pink-bg: rgb(255, 182, 193);
+  --pink-soft: rgba(255, 182, 193, 0.3);
+  --green-main: hsl(120, 64%, 25%);
+  --green-dark: rgb(34, 75, 17);
+  --text: rgb(40, 40, 40);
+}
+
+main {
+  width: 90%;
+}
+
+
+.hex-example {
+  color: #ff69b4;
+}
+
+.wide-gamut-example {
+  color: color(display-p3 0.2 0.6 0.2);
+}
+
+.box-model-example {
+  margin: 10px 20px 10px 20px;
+  padding: 10px 20px 10px 20px;
+  border: 2px solid var(--green-main);
+}
+
+header {
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+summary {
+  border-style: dashed;
+  border-color: var(--green-main);
+  border-width: 2px;
+  border-radius: 6px;
+  padding: 8px;
 }
 
 body {
-    color: var(--main-color);
-    background-color: rgb(255, 182, 193);
+  background-color: var(--pink-bg);
+  color: var(--text);
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 20px;
 }
 
+h1, h2, h3 {
+  color: var(--green-main);
+  font-family: var(--body-font, "Instrument Serif", sans-serif);
+  text-align: center;
+}
+
+h1 {
+  text-decoration: underline;
+}
+
+.hide-example {
+  display: none;
+}
 
 /*fallback defined*/
 p {
-    color: var(--main-color, rgb(79, 79, 79));
-    width: 80%;
-    font-size: 1.5em;
-    padding: 2rem;
-    margin: auto;
-    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.6;
     font-family: "Instrument Serif", sans-serif;
 }
 
 * {
-    color: var(--main-color);
-    padding: 2rem;
-    margin: auto;
+    color: var(--text);
     text-align: left;
-    width: 80%;
   }
 
-h1, h2, h3 {
-    color: hsl(120, 64%, 13%);
-    margin: 10pt;
-    width: 5cm;
-    display: block;
-    font-family: "Instrument Serif", sans-serif;
-    font-style: bold;
+
+
+li {
+    padding: 8px;
+    color: var(--green-dark);
+}
+
+#disclaimer {
+  margin-left: 40pt;
 }
 
 #unique-box {
@@ -53,6 +101,7 @@ h1, h2, h3 {
   font-weight: bold;
   color: lightpink
 }
+
 
 /*
 descendant combinator
@@ -65,46 +114,49 @@ div div {
 h1 {
     font-size: 40pt;
     text-decoration: underline;
-    position: fixed
+    position: fixed;
 }
 
 div {
-  margin-top: 10px;
-  margin-right: 20px;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  padding-top: 10px;
-  padding-right: 20px;
-  padding-bottom: 10px;
-  padding-left: 20px; 
-  border-style: dotted;
-  border-color: hsl(120, 64%, 13%);
-  border-width: 2px;
-  border-radius: 8px;
-  width: 300px;
-  height: 150px;
-  max-width: 500px;
-  min-width: 200px;
-  position: sticky
+  background-color: var(--pink-soft);
+  border: 2px solid var(--green-main);
+  border-radius: 12px;
+  padding: 15px 20px;
+  margin: 15px auto;
+  max-width: 600px;
 }
 
 div p {
-  color: red;
+  color: rgb(38, 92, 16);
+  padding: 10px 10px 10px 10px;
+  border-style: solid;
+  align-self: left;
+  margin-left: 40pt;
 }
 
-ul {
-  padding: 10px 20px 10px 20px;
-  display: inline;
+ul, ol {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+button {
+  background-color: var(--green-main);
+  color: white;
+  border: none;
+  padding: 10px;
+  min-width: 100px;
+  border-radius: 8px;
 }
 
 button:hover {
-  color: color(srgb 0 0.4 0);
-  background-color: color-mix(in srgb, hotpink 70%, white 30%);
+  background-color: hsl(120, 50%, 35%);
+  transform: scale(1.05);
 }
 
 button:active {
   transform: scale(0.95);
-  background-color: darkpink;
+  background-color: hotpink;
 }
 .Basics {
   display: flex;
@@ -112,6 +164,10 @@ button:active {
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
+  padding: 12px;
+  border: 1px solid var(--green-main);
+  border-radius: 8px;
+  min-width: 120px;
 }
 
 .Accessories {
@@ -119,6 +175,16 @@ button:active {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 10px;
   justify-items: center;
+  padding: 10px;
+  border: 1px solid var(--green-main);
+  background: white;
+  border-radius: 6px;
+}
+
+audio {
+  display: block;
+  height: 40px;
+  width: 100%;
 }
 
 /* a tablet orrr small laptop */
@@ -129,10 +195,69 @@ button:active {
 }
 /* phone */
 @media (max-width: 600px) {
-  body {
-    font-size: 14px;
+  div {
+    width: 90%;
   }
-  .Basics {
-    flex-direction: column;
+
+  table {
+    width: 100%;
   }
+}
+
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 80%;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+a[href] {
+  color: var(--green-main);
+}
+
+div > p {
+  font-style: italic;
+}
+
+h3 ~ p {
+  color: var(--green-dark);
+}
+
+h2 + ul {
+  border: 1px solid var(--green-main);
+}
+
+div.special {
+  border: 2px solid green;
+}
+
+div:has(p) {
+  background-color: rgba(255, 182, 193, 0.2);
+}
+
+nav {
+  padding: 0.5em 1em;        /* em = relative unit #3 */
+  min-height: 1cm; 
+  ul {
+    list-style: none;
+  }
+}
+
+/* inline-block for nav links */
+nav a {
+  display: inline-block;
+  padding: 4px 8px;
+}
+
+th, td {
+  border: 1px solid hsl(120, 64%, 13%);
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: color-mix(in srgb, hotpink 40%, white 60%);
+  font-weight: bold;
 }
