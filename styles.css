@@ -7,19 +7,11 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Exo';
-    src: url('Exo-Regular.woff2') format('woff2'),
-        url('Exo-Regular.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-}
 
 
 /* global, variables can be defined here */
 :root {
-  --main-color: #A9A9A9;
+  --main-color: #000000;
 }
 
 body {
@@ -30,7 +22,7 @@ body {
 
 /*fallback defined*/
 p {
-    color: var(--main-color, black);
+    color: var(--main-color, rgb(79, 79, 79));
     width: 80%;
     font-size: 1.5em;
     padding: 2rem;
@@ -39,13 +31,36 @@ p {
     font-family: "Instrument Serif", sans-serif;
 }
 
+* {
+    color: var(--main-color);
+    padding: 2rem;
+    margin: auto;
+    text-align: left;
+    width: 80%;
+  }
+
 h1, h2, h3 {
     color: hsl(120, 64%, 13%);
     margin: 10pt;
     width: 5cm;
     display: block;
-    font-family: "Exo", sans-serif;
+    font-family: "Instrument Serif", sans-serif;
+    font-style: bold;
 }
+
+#unique-box {
+  background-color: rgb(54, 126, 72);
+  font-weight: bold;
+  color: lightpink
+}
+
+/*
+descendant combinator
+*/
+div div {
+  color: rgb(40, 114, 71);
+}
+
 
 h1 {
     font-size: 40pt;
@@ -71,6 +86,10 @@ div {
   max-width: 500px;
   min-width: 200px;
   position: sticky
+}
+
+div p {
+  color: red;
 }
 
 ul {
